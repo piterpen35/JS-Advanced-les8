@@ -1,0 +1,14 @@
+<div class="avatar-edit-bar">
+    <input type="button" (click)="clearAvatarBlock()" class="avatar-block-clear hidden" title="Clear">
+    <input type="button" (click)="editAvatarBlock()" class="edit-buttons avatar-block-edit hidden" title="Edit">
+</div>
+<div>
+    <img id="user-avatar" src={{userServise.showSrc()}} alt="User Photo">
+</div>
+<form class="avatar-edit-form hidden">
+    <input type="text" name="avatar-src" class="avatar-src" [value]="avatar" placeholder="Write here new avatar location">
+    <div class="avatar-form-bar">
+        <input class="avatar-form-confirm" (click)="confirmChangesAvatar()" type="button" value="Confirm">
+        <input class="avatar-form-reject" (click)="rejectChangesAvatar()" type="button" value="Reject">
+    </div>
+</form>

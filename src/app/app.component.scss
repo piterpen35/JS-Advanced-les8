@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-shadow: 1px 1px 0px black;
+}
+
+body {
+    width: 98vw;
+    height: fit-content;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 60px 40px;
+    border-radius: 15px;
+    border: 3px solid blueviolet;
+    box-shadow: 0px 0px 10px grey; 
+}
+
+header {
+    width: 100%;
+    height: 560px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+app-avatar-block {
+    width: 36%;
+    min-width: 290px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(97, 81, 81, 0.664);
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    background-color: rgb(248, 245, 239);
+}
+
+app-info-block {
+    width: 60%;
+    min-width: 290px;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgba(97, 81, 81, 0.664);
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    background-color: rgb(248, 245, 239);
+}
+
+main {
+    width: 100%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+app-skill-block, app-project-block {
+    width: 48%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding-top: 15px;
+    border: 1px solid rgba(97, 81, 81, 0.664);
+    border-radius: 15px;
+    box-shadow: 5px 5px 10px black;
+    background-color: rgb(248, 245, 239);
+}
+
+.none {
+    display: none;
+}

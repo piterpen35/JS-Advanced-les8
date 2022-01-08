@@ -1,0 +1,89 @@
+#user-avatar {
+    max-width: 290px;
+    max-height: 440px;
+    border-radius: 15px;
+}
+
+.avatar-edit-bar {
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar-block-edit, .avatar-block-clear {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    background: {
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+        color: white;
+    };
+    &:hover {
+        cursor: pointer;
+    };
+} 
+
+.avatar-block-edit {
+    background-image: url(../../assets/extinguishes/pencil.svg);
+    &:hover {
+        background-color: yellow;
+        transition: .7s;
+    };
+}
+
+.avatar-block-clear {
+    background-image: url(../../assets/extinguishes/basket.svg);
+    &:hover {
+        background-color: red;
+        transition: .7s;
+    };
+}
+
+.avatar-edit-form {
+    width: 80%;
+    height: 64px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar-src {
+    width: 97%;
+    height: 30px;
+    padding-left: 5px;
+    &:focus {
+        border: 3px solid blue;
+    };
+}
+
+.avatar-form-bar {
+    width: 100%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.avatar-form-confirm, .avatar-form-reject {
+    width: 50%;
+    height: 30px;
+    &:hover {
+        background-color: blueviolet;
+        color: white;
+        transition: 0.5s;
+        cursor: pointer;
+    };
+}
+
+.hidden {
+    visibility: hidden;
+}
