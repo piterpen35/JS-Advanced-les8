@@ -1,0 +1,37 @@
+<div class="skill-edit-bar">
+    <input type="button" (click)="addSkill()" class="skill-block-add hidden" title="Add">
+    <input type="button" (click)="clearSkillBlock()" class="skill-block-clear hidden" title="Clear">
+    <input type="button" (click)="editSkillBlock()" class="edit-buttons skill-block-edit hidden" title="Edit">
+</div>
+<h3 class="skills-header">Soft Skills & Technical Skills</h3>
+<hr color="blueviolet" width="90%">
+<div *ngFor="let skill of skills; let i = index" [class.opened]="i===0" (click) = "openBlock()" class="skill">
+    <h4 class="skill-title">{{skill.skillHeader}}</h4>
+    <p class="skill-description">{{skill.skillDescription}}</p>
+</div>
+<form class="skill-add-form none">
+    <h2>Create new skill</h2>
+    <input type="text" class="skill-add-form-header" placeholder="Title here...">
+    <textarea class="skill-add-form-descr" placeholder="Description here..."></textarea>
+    <div class="skill-form-bar">
+        <input class="skill-add-form-confirm" (click)="confirmAddSkill()" type="button" value="Confirm">
+        <input class="skill-add-form-reject" (click)="rejectAddSkill()" type="button" value="Reject">
+    </div>
+</form>
+<div class="skill-add-form-clear none">
+    <h3>Are you sure you want to clear all skills?</h3>
+    <div class="skill-add-form-clear-buttons">
+        <input type="button" (click)="clearSkillBlockAcept()" class="skill-add-form-clear-confirm" value="Confirm">
+        <input type="button" (click)="clearSkillBlockReject()" class="skill-add-form-clear-reject" value="Reject">
+    </div>
+</div>
+<form class="skill-edit-form none">
+    <div *ngFor="let skill of skills" class="skill-item-form">
+        <input type="text" class="skill-input" [value]="skill.skillHeader" placeholder="Skill title">
+        <textarea class="skill-textarea" [value]="skill.skillDescription" placeholder="Skill description"></textarea>
+    </div>
+    <div class="skill-form-bar">
+        <input class="skill-form-confirm" (click)="confirmChangesSkills()" type="button" value="Confirm">
+        <input class="skill-form-reject" (click)="rejectChangesSkills()" type="button" value="Reject">
+    </div>
+</form>

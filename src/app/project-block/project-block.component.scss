@@ -1,0 +1,266 @@
+.projects-header {
+    align-self: center;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.project {
+    width: 40%;
+    height: 320px;
+    border: 3px solid blueviolet;
+    background-color: white;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px auto;
+    padding: 10px;
+    box-shadow: 5px 5px 7px black;
+    overflow: hidden;
+}
+
+.project-logo {
+    width: 90%;
+    height: 210px;
+    margin: auto;
+    border-radius: 5px;
+}
+
+.project-description {
+    width: 90%;
+    height: 100px;
+    padding: 0 10px;
+    color: black;
+    text-align: center;
+    word-wrap: break-word;
+    line-height: 20px;
+}
+
+.project-edit-bar {
+    height: 40px;
+    width: 150px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-block-edit, .project-block-clear, .project-block-add {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    background: {
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+        color: white;
+    };
+    &:hover {
+        cursor: pointer;
+    };
+} 
+
+.project-block-edit {
+    background-image: url(../../assets/extinguishes/pencil.svg);
+    &:hover {
+        background-color: yellow;
+        transition: .7s;
+    };
+}
+
+.project-block-clear {
+    background-image: url(../../assets/extinguishes/basket.svg);
+    &:hover {
+        background-color: red;
+        transition: .7s;
+    };
+}
+
+.project-block-add {
+    background-image: url(../../assets/extinguishes/add.svg);
+    &:hover {
+        background-color: green;
+        transition: .7s;
+    };
+}
+
+.project-edit-form {
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(133, 82, 182);
+    border-radius: 10px;
+}
+
+.project-item-form {
+    width: 90%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.project-item-form > input[type="text"] {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.project-item-form > textarea {
+    display: block;
+    width: 90%;
+    height: 120px;
+    border-radius: 5px;
+}
+
+.project-form-bar {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-form-confirm, .project-form-reject {
+    width: 50%;
+    height: 30px;
+    font-size: 18px;
+    &:hover {
+        background-color: blue;
+        color: white;
+        transition: 0.5s;
+        cursor: pointer;
+    };
+}
+
+.project-add-form-clear {
+    width: 92%;
+    height: 200px;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    background-color: blue;
+    box-shadow: 5px 5px 5px black;
+}
+
+.project-add-form-clear-buttons {
+    width: 90%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.project-add-form-clear-confirm, .project-add-form-clear-reject {
+    width: 45%;
+    height: 30px;
+    font-size: 18px;
+    &:hover {
+        background-color: blue;
+        color: white;
+        transition: 0.5s;
+        cursor: pointer;
+    };
+}
+
+.project-add-form {
+    width: 95%;
+    height: 500px;
+    z-index: 10;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(133, 82, 182);
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 3px solid blue;
+}
+
+.project-add-form-header {
+    width: 80%;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 5px;
+    line-height: 26px;
+    font-size: 20px;
+}
+
+.project-add-form-descr {
+    width: 80%;
+    height: 250px;
+    padding-left: 5px;
+    border-radius: 5px;
+    line-height: 26px;
+    font-size: 20px;
+}
+
+.project-add-form-bar {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.project-add-form-confirm, .project-add-form-reject {
+    width: 50%;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    &:hover {
+        background-color: rgb(1, 1, 77);
+        transition: 0.5s;
+        cursor: pointer;
+    };
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}

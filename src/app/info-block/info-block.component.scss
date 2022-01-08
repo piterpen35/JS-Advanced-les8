@@ -1,0 +1,107 @@
+.info-edit-bar {
+    height: 40px;
+    width: 90px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-block-edit, .info-block-clear {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    background: {
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+        color: white;
+    };
+    &:hover {
+        cursor: pointer;
+    };
+} 
+
+.info-block-edit {
+    background-image: url(../../assets/extinguishes/pencil.svg);
+    &:hover {
+        background-color: yellow;
+        transition: .7s;
+    };
+}
+
+.info-block-clear {
+    background-image: url(../../assets/extinguishes/basket.svg);
+    &:hover {
+        background-color: red;
+        transition: .7s;
+    };
+}
+
+.info-edit-form {
+    width: 80%;
+    height: 75%;
+    padding: 20px;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(133, 82, 182);
+    border-radius: 10px;
+}
+
+.info-edit-form > label {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 30px;
+    font-size: 28px;
+    color: white;
+}
+
+.info-edit-form > label > input {
+    width: 70%;
+    height: 30px;
+    border-radius: 7px;
+    padding-left: 5px;
+    font-size: 18px;
+}
+
+.info-form-bar {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info-form-confirm, .info-form-reject {
+    width: 50%;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    &:hover {
+        background-color: rgb(1, 1, 77);
+        transition: 0.5s;
+        cursor: pointer;
+    };
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}

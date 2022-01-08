@@ -1,0 +1,274 @@
+.skills-header {
+    align-self: center;
+    line-height: 40px;
+    font-size: 30px;
+}
+
+.skill {
+    width: 90%;
+    height: 80px;
+    border: 3px solid blueviolet;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    box-shadow: 5px 5px 7px black;
+    overflow: hidden;
+    transition: all 0.5s;
+    & :hover {
+        cursor: pointer;
+    };
+}
+
+.skill-title {
+    width: 100%;
+    height: 80px;
+    line-height: 80px;
+    background-color: blueviolet;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    text-shadow: 0px 2px black;
+}
+
+.skill-description {
+    width: 100%;
+    height: 260px;
+    padding: 0 10px;
+    color: black;
+    word-wrap: break-word;
+    line-height: 20px;
+}
+
+.skill-edit-bar {
+    height: 40px;
+    width: 150px;
+    position: absolute;
+    top: 4px;
+    right: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-block-edit, .skill-block-clear, .skill-block-add {
+    height: 35px;
+    width: 35px;
+    border-radius: 10px;
+    background: {
+        position: center;
+        repeat: no-repeat;
+        size: contain;
+        color: white;
+    };
+    &:hover {
+        cursor: pointer;
+    };
+} 
+
+.skill-block-edit {
+    background-image: url(../../assets/extinguishes/pencil.svg);
+    &:hover {
+        background-color: yellow;
+        transition: .7s;
+    };
+}
+
+.skill-block-clear {
+    background-image: url(../../assets/extinguishes/basket.svg);
+    &:hover {
+        background-color: red;
+        transition: .7s;
+    };
+}
+
+.skill-block-add {
+    background-image: url(../../assets/extinguishes/add.svg);
+    &:hover {
+        background-color: green;
+        transition: .7s;
+    };
+}
+
+.skill-edit-form {
+    width: 95%;
+    height: 90%;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(133, 82, 182);
+    border-radius: 10px;
+}
+
+.skill-item-form {
+    width: 90%;
+    height: 12%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.skill-item-form > input[type="text"] {
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+}
+
+.skill-item-form > textarea {
+    display: block;
+    width: 90%;
+    height: 80px;
+    border-radius: 5px;
+}
+
+.skill-form-bar {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-form-confirm, .skill-form-reject {
+    width: 50%;
+    height: 30px;
+    font-size: 18px;
+    &:hover {
+        background-color: blue;
+        color: white;
+        transition: 0.5s;
+        cursor: pointer;
+    };
+}
+
+.skill-add-form-clear {
+    width: 92%;
+    height: 200px;
+    position: absolute;
+    top: 120px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 5;
+    border: 1px solid black;
+    border-radius: 10px;
+    color: white;
+    background-color: blue;
+    box-shadow: 5px 5px 5px black;
+}
+
+.skill-add-form-clear-buttons {
+    width: 90%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 1px solid white;
+    border-radius: 10px;
+}
+
+.skill-add-form-clear-confirm, .skill-add-form-clear-reject {
+    width: 45%;
+    height: 30px;
+    font-size: 18px;
+    &:hover {
+        background-color: blue;
+        color: white;
+        transition: 0.5s;
+        cursor: pointer;
+    };
+}
+
+.opened {
+    height: 300px;
+}
+
+.skill-add-form {
+    width: 95%;
+    height: 500px;
+    z-index: 10;
+    padding: 10px;
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(133, 82, 182);
+    border-radius: 10px;
+    box-sizing: border-box;
+    border: 3px solid blue;
+}
+
+.skill-add-form-header {
+    width: 80%;
+    height: 30px;
+    padding-left: 5px;
+    border-radius: 5px;
+    line-height: 26px;
+    font-size: 20px;
+}
+
+.skill-add-form-descr {
+    width: 80%;
+    height: 250px;
+    padding-left: 5px;
+    border-radius: 5px;
+    line-height: 26px;
+    font-size: 20px;
+}
+
+.skill-add-form-bar {
+    width: 80%;
+    height: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skill-add-form-confirm, .skill-add-form-reject {
+    width: 50%;
+    height: 30px;
+    background-color: blue;
+    color: white;
+    font-size: 18px;
+    &:hover {
+        background-color: rgb(1, 1, 77);
+        transition: 0.5s;
+        cursor: pointer;
+    };
+}
+
+h2 {
+    font-size: 30px;
+    color: white;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.none {
+    display: none;
+}

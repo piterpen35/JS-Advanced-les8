@@ -1,0 +1,40 @@
+<div class="project-edit-bar">
+    <input type="button" (click)="addProject()" class="project-block-add hidden" title="Add">
+    <input type="button" (click)="clearProjectBlock()" class="project-block-clear hidden" title="Clear">
+    <input type="button" (click)="editProjectBlock()" class="edit-buttons project-block-edit hidden" title="Edit">
+</div>
+<h3 class="projects-header">Experience</h3>
+<hr color="blueviolet" width="90%">
+<div *ngFor="let project of projects" class="project">
+    <img src={{project.projectLogo}} alt="Project Logo" class="project-logo">
+    <hr color="blueviolet" width="90%">
+    <p class="project-description">
+        {{project.projectDescription}}
+    </p>
+</div>
+<form class="project-add-form none">
+    <h2>Create new project</h2>
+    <input type="text" class="project-add-form-header" placeholder="Title of project here...">
+    <textarea class="project-add-form-descr" placeholder="Description of project here..."></textarea>
+    <div class="project-form-bar">
+        <input (click)="confirmAddProject()" class="project-add-form-confirm" type="button" value="Confirm">
+        <input (click)="rejectAddProject()" class="project-add-form-reject" type="button" value="Reject">
+    </div>
+</form>
+<div class="project-add-form-clear none">
+    <h3>Are you sure you want to clear all projects?</h3>
+    <div class="project-add-form-clear-buttons">
+        <input (click)="clearProjectBlockAcept()" type="button" class="project-add-form-clear-confirm" value="Confirm">
+        <input (click)="clearProjectBlockReject()" type="button" class="project-add-form-clear-reject" value="Reject">
+    </div>
+</div>
+<form class="project-edit-form none">
+    <div *ngFor="let project of projects" class="project-item-form">
+        <input type="text" class="project-input" [value]="project.projectLogo" placeholder="Project logo">
+        <textarea class="project-textarea" [value]="project.projectDescription" placeholder="Project description"></textarea>
+    </div>
+    <div class="project-form-bar">
+        <input class="project-form-confirm" (click)="confirmChangesProject()" type="button" value="Confirm">
+        <input class="project-form-reject" (click)="rejectChangesProject()" type="button" value="Reject">
+    </div>
+</form>
